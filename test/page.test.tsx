@@ -1,10 +1,10 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
+import "@testing-library/jest-dom";
 import Home from "@/app/page";
 
-test("renders hello world message", () => {
+test("renders login page", () => {
   render(<Home />);
-  const helloWorldElement = screen.getByText(/hello, world/i);
-  expect(helloWorldElement).toBeDefined();
+  const loginElement = screen.getByText(/Login with account/i);
+  expect(loginElement).toBeInTheDocument();
 });
